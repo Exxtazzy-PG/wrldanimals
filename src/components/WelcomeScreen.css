@@ -1,0 +1,62 @@
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.welcome-container {
+  text-align: center;
+  color: white;
+}
+
+.welcome-logo {
+  font-size: 5rem;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.welcome-subtitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-loader {
+  height: 4px;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  border-radius: 2px;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 1.75rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 2.5rem;
+  }
+  
+  .welcome-logo {
+    font-size: 3.5rem;
+  }
+}

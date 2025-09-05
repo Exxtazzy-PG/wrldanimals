@@ -1,0 +1,167 @@
+.catalog-section {
+  background-color: var(--bg-primary);
+}
+
+.catalog-controls {
+  display: flex;
+  gap: 24px;
+  margin: 32px 0 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-section {
+  flex: 1;
+  max-width: 400px;
+}
+
+.filter-section {
+  flex-shrink: 0;
+}
+
+.animals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.animal-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--bg-primary) !important;
+}
+
+.animal-card .ant-card-body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.animal-card .ant-card-meta-title {
+  color: var(--text-primary) !important;
+}
+
+.animal-card .ant-card-meta-description {
+  color: var(--text-secondary) !important;
+}
+
+.animal-card .ant-card-actions {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.animal-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.animal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.animal-card:hover .animal-image img {
+  transform: scale(1.1);
+}
+
+.animal-category {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.animal-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.card-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary) !important;
+  font-size: 0.875rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 48px;
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+/* Ant Design overrides */
+.search-input .ant-input {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.search-input .ant-input:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2) !important;
+}
+
+.search-input .ant-input::placeholder {
+  color: var(--text-tertiary) !important;
+}
+
+.category-select .ant-select-selector {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.category-select .ant-select-selection-item {
+  color: var(--text-primary) !important;
+}
+
+.category-select .ant-select-arrow {
+  color: var(--text-secondary) !important;
+}
+
+@media (max-width: 768px) {
+  .catalog-controls {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .search-section {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .filter-section {
+    width: 100%;
+  }
+  
+  .category-select {
+    width: 100% !important;
+  }
+  
+  .animals-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  
+  .animal-image {
+    height: 200px;
+  }
+}
